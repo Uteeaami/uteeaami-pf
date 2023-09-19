@@ -1,0 +1,60 @@
+.slideshowContainer {}
+
+.slideshowContainer p {
+  margin-bottom: 0.5em;
+}
+
+.slideshow {
+  padding: 1em 0;
+  overflow: hidden;
+  max-width: 720px;
+  border-top: 1px solid #383a4d;
+  border-bottom: 1px solid #383a4d;
+  border-radius: 20px;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease-in-out 1000ms;
+  width: auto;
+}
+
+.slideGroup {
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.slideshowDotsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.slideshowDot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 7px 0 7px;
+    background-color: #383737;
+}
+
+.selectedDot{
+  background-color: #DFE1F4;
+}
+
+
+@media only screen and (max-width: 1800px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .slideshow {
+    max-width: 90vw;
+  }
+
+}

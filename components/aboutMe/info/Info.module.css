@@ -1,0 +1,31 @@
+
+
+.infoContainer {
+  width: auto;
+  }
+
+  .infoContainer h1{
+    line-height: 1em;
+  }
+  
+  .imageContainer {
+    right: 3em;
+    position: relative;
+  }
+  
+  @media only screen and (max-width: 768px) {
+
+    .imageContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      right: 1em;
+    }
+
+    .image{
+      width: 260px;
+      height: 100px;
+    }
+  }
+  

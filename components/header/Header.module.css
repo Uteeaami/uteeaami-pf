@@ -1,0 +1,137 @@
+.headerContainer {
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    top: 0;
+    position: fixed;
+  }
+
+.headerContent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    border-radius: 80px;
+    width: 18em;
+    padding: 1em;
+    position: relative;
+}
+
+.headerContent p{
+    color: #FFFFFF;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color ease-out 0.2s;
+}
+
+.headerContent p:hover{
+    color: #bbbde2;
+}
+
+.headerContent a{
+    color: #FFFFFF;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color ease-out 0.2s;
+}
+
+.headerContent a:hover{
+    color: #bbbde2;
+}
+
+.dropdownVisible {
+    position: absolute;
+    top: 110%;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid hsla(0, 0%, 100%, 0.2);
+    border-radius: 8px;
+    padding: 0.2em;
+    opacity: 0;
+    visibility: hidden;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    transform-origin: top center;
+  }
+  
+  .showDropdown {
+    opacity: 1;
+    width: 14em;
+    height: auto;
+    transform: scaleY(1);
+    visibility: visible;
+  }
+
+
+.dropdownItem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.dropdownItem:hover .dropdownImage {
+    background-image: linear-gradient(-45deg, #2929f0 0%, rgb(249, 162, 47) 25%, rgb(243, 234, 66) 51%, #3737e3 100%);
+}
+
+.dropdownItem:hover {
+    background-color: rgb(251, 244, 252);
+}
+
+.dropdownItem span{
+    color: black;
+    padding-left: 0.5em;
+}
+
+.dropdownImage{
+    padding: 0.5em;
+    border: 1px solid hsla(0, 5%, 13%, 0.2);
+    border-radius: 10px;
+}
+
+.dropdownItem a {
+    text-decoration: none; 
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.leftContent{
+    display: flex;
+    align-items: center; 
+}
+
+.rightContent {
+    margin-left: auto;
+}
+
+.hiddenIcon {
+    color: white;
+    transform: translateX(-50%);
+    opacity: 0.1;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.visibleIcon {
+    color: black;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out,
+                opacity 0.3s ease-in;
+}
+
+
+@media only screen and (max-width: 1366px) {
+
+  }
