@@ -26,14 +26,20 @@ export default function ProjectsPage({ data }: PageProps) {
               target="_blank"
               className={styles.projectCard}
             >
-              <div style={{ display:"flex", flexBasis:"60%", alignItems:"center", paddingTop:"1em" }}>
-              <Image
-                
-                src={project?.icon?.data?.attributes?.url}
-                width={180}
-                height={180}
-                alt="project_img"
-              />
+              <div
+                style={{
+                  display: "flex",
+                  flexBasis: "60%",
+                  alignItems: "center",
+                  paddingTop: "1em",
+                }}
+              >
+                <Image
+                  src={project?.icon?.data?.attributes?.url}
+                  width={180}
+                  height={180}
+                  alt="project_img"
+                />
               </div>
               <div className={styles.projectContentContainer}>
                 <h2 style={{ paddingBottom: "2px" }}>{project.title}</h2>

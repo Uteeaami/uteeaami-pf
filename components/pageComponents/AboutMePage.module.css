@@ -63,20 +63,22 @@
     .image{
         height: auto;
         max-height: 55vh;
-        width: 90vw;
+        width: 60vw;
     }
   }
 
   @media only screen and (max-width: 768px) {
     .aboutMePageContainer{
-        margin: 4em 1em 0 1em;
-        min-height: 0;
         gap: 1em;
+    }
+
+    .aboutMeContainer{
+        gap: 2em;
     }
 
     .image{
         height: auto;
-        max-height: 45vh;
+        max-height: 50vh;
         width: 90vw;
         min-width: 0;
     }

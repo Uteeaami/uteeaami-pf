@@ -27,10 +27,10 @@ export default function AboutMePage({ data }: PageProps) {
         </div>
       </div>
       <div className={styles.carouselContainer}>
-          <CarouselReel
-            header={data?.reel?.header}
-            images={data?.reel?.technologies?.data}
-          ></CarouselReel>
+        <CarouselReel
+          header={data?.reel?.header}
+          images={data?.reel?.technologies?.data}
+        ></CarouselReel>
       </div>
     </div>
   );
