@@ -1,34 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
 
-## Getting Started
+This is a portfolio website built using Next.js (TypeScript), Strapi, Vercel, Fly.io, and Cloudinary.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Live Build](#live-build)
+- [Setup](#setup)
+- [Media Assets](#media-assets)
+- [Usage](#usage)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This repository contains the source code for a portfolio website. It combines a Next.js frontend, powered by TypeScript, and a Strapi backend for content management. The frontend is deployed on Vercel, and the backend is hosted on Fly.io. Media assets, are stored on Cloudinary.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Strapi](https://strapi.io/)
+- [Vercel](https://vercel.com/)
+- [Fly.io](https://fly.io/)
+- [Cloudinary](https://cloudinary.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## Live build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check out the live build of this portfolio website at [URL](https://uteeaami-pf.vercel.app/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the Repository**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+     ```shell
+     git clone https://github.com/Uteeaami/uteeaami-pf.git
+     git clone https://github.com/Uteeaami/pf-strapi
+     ```
+
+2. **Install Dependencies**
+
+   - In the "frontend" directory:
+
+     ```shell
+     cd frontend
+     npm install
+     ```
+
+   - In the "backend" directory:
+
+     ```shell
+     cd backend
+     npm install
+     ```
+
+3. **Configure Environment Variables**
+
+   Create `.env` or `.env.local` files in the respective directories and set up environment variables as needed.
+
+4. **Run Locally**
+
+   Start the development server for both the frontend and backend:
+
+   - In the "frontend" directory:
+
+     ```shell
+     npm run dev
+     ```
+
+   - In the "backend" directory:
+
+     ```shell
+     npm run develop
+     ```
+
+   Access the website locally at `http://localhost:3000`.
+
+## Media assets
+
+Please note that media files (images, videos, etc.) used in the portfolio content won't be present in the "backend"/CMS when you clone this repository.
+
+## Usage
+
+Customize the frontend and backend code to meet your portfolio requirements. Add or edit content using the Strapi CMS. Deploy the website to your preferred hosting platform.
