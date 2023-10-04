@@ -3,18 +3,53 @@ import styles from "./AboutMePage.module.css";
 import AboutMe from "../aboutMe/AboutMe";
 import Image from "next/image";
 
-interface PageProps {
-  data: any;
+interface FacultyItem {
+  data: {
+    attributes: {
+      url: string;
+    };
+  };
 }
 
-export default function AboutMePage({ data }: PageProps) {
-  const portraitUrl = data?.portrait?.data?.attributes?.url;
+interface PortraitItem {
+  data: {
+    attributes: {
+      url: string;
+    };
+  };
+}
+
+interface ReelItem {
+  header: string;
+  technologies: {
+    data: Array<object>;
+  };
+}
+
+interface PageProps {
+  data: {
+    name: string;
+    caption: string;
+    faculty: FacultyItem;
+    text: [];
+    portrait: PortraitItem;
+    reel: ReelItem;
+  };
+}
+
+export default function AboutMePage({ data }: PageProps): JSX.Element | null {
+  const portraitUrl: string = data?.portrait?.data?.attributes?.url;
 
   return (
     <div className={styles.aboutMePageContainer}>
       <div className={styles.aboutMeContainer}>
         <div className={styles.aboutContainer}>
-          <AboutMe data={data}></AboutMe>
+          <AboutMe
+            name={data?.name}
+            caption={data?.caption}
+            imgUrl={data?.faculty?.data?.attributes?.url}
+            textItem={data?.text}
+          ></AboutMe>
         </div>
         <div className={styles.imageContainer}>
           <Image

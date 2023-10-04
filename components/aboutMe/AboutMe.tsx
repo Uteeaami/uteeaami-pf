@@ -2,19 +2,22 @@ import styles from "./AboutMe.module.css";
 import Image from "next/image";
 
 interface AboutMeProps {
-  data: any;
+  name: string;
+  caption: string;
+  imgUrl: string;
+  textItem: [];
 }
 
-export default function AboutMe({ data }: AboutMeProps) {
+export default function AboutMe({ name, caption, imgUrl, textItem }: AboutMeProps):JSX.Element | null {
   return (
     <div className={styles.pageContainer}>
       <div className={styles.infoContainer}>
-        <h1>{data?.name}</h1>
-        <p>{data?.caption}</p>
+        <h1>{name}</h1>
+        <p>{caption}</p>
         <div className={styles.imageContainer}>
           <Image
             className={styles.image}
-            src={data?.faculty?.data?.attributes?.url}
+            src={imgUrl}
             width={390}
             height={145}
             alt="Utu logo"
@@ -22,7 +25,7 @@ export default function AboutMe({ data }: AboutMeProps) {
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
-        {data?.text.map((item: { header: string; text: string }) => (
+        {textItem.map((item: {header: string; text: string;}) => (
           <div className={styles.textContainer} key={item.header}>
             <h2>{item.header}</h2>
             {item.text.split("\n").map((phrase: string, index: number) => (

@@ -1,6 +1,6 @@
 import styles from "./Carousel.module.css";
 import { useState, useEffect, useRef, Key } from "react";
-import useWindowDimensions from "../../../functions/useWindowDimensions";
+import useWindowDimensions, { WindowDimensions } from "../../../functions/useWindowDimensions";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
@@ -9,13 +9,13 @@ interface CarouselProps {
   images: any;
 }
 
-export default function CarouselReel({ header, images }: CarouselProps) {
-  const [index, setIndex] = useState(0);
+export default function CarouselReel({ header, images }: CarouselProps):JSX.Element | null {
+  const [index, setIndex] = useState<number>(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const delay = 10000;
-  const { height, width } = useWindowDimensions();
+  const delay: number = 10000;
+  const { height, width } = useWindowDimensions() as WindowDimensions;
 
-  const groupedImages = [];
+  const groupedImages: {id: string; images: string[]}[] = [];
   let maxItemsToShow: number = 6;
   if (width <= 768) {
     maxItemsToShow = 4;
@@ -29,7 +29,7 @@ export default function CarouselReel({ header, images }: CarouselProps) {
     groupedImages.push(group);
   }
 
-  function resetTimeout() {
+  function resetTimeout(): void {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -39,7 +39,7 @@ export default function CarouselReel({ header, images }: CarouselProps) {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
-        setIndex((prevIndex) =>
+        setIndex((prevIndex: number) =>
           prevIndex === groupedImages.length - 1 ? 0 : prevIndex + 1
         ),
       delay

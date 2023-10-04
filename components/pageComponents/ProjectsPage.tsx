@@ -1,12 +1,15 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./ProjectsPage.module.css";
 
 interface PageProps {
-  data: any;
+  data: {
+    projects: string;
+    projectInfo: [];
+  }
 }
 
-export default function ProjectsPage({ data }: PageProps) {
+export default function ProjectsPage({ data }: PageProps): JSX.Element | null {
   return (
     <div className={styles.projectsPageContainer}>
       <h1 id="projects">{data?.projects}</h1>

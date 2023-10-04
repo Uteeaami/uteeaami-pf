@@ -1,4 +1,4 @@
-export async function fetchFromStrapi() {
+export async function fetchFromStrapi(): Promise<any> {
   try {
     const response = await fetch(
       `${process.env.STRAPI_PROD_URL}/api/portfolio?populate[text][populate]&populate[faculty][populate]&populate[projectInfo][populate][0]=tag&populate[projectInfo][populate]=icon&populate[projectInfo][populate]=href&populate[portrait][populate]=icon&populate[projects][populate]&populate[reel][populate][0]=technologies`,
