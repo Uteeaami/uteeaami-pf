@@ -55,7 +55,7 @@ export default function AboutMePage({ data }: PageProps): JSX.Element | null {
           <Image
             className={styles.image}
             src={portraitUrl}
-            width={500}
+            width={450}
             height={500}
             alt="Portrait"
           ></Image>
