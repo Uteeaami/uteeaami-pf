@@ -111,7 +111,8 @@
     .projectCardContainer{
       grid-template-columns: repeat(1,1fr);
   }
+
   .projectContentContainer{
-    margin-bottom: 1em ;
+    margin-bottom: 1em;
   }
   }

@@ -63,8 +63,8 @@
 
     .image{
         height: auto;
-        max-height: 55vh;
-        width: 60vw;
+        max-height: 100%;
+        width: 100%;
     }
   }
 
@@ -79,7 +79,7 @@
 
     .image{
         height: auto;
-        max-height: 50vh;
+        max-height: 100%;
         width: 90vw;
         min-width: 0;
     }
